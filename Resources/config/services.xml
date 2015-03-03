@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="ldap.class">Zend\Ldap\Ldap</parameter>
+        <parameter key="ldap.arguments" type="collection">
+            <parameter key="host">%ldap_host%</parameter>
+            <parameter key="username">%ldap_username%</parameter>
+            <parameter key="password">%ldap_password%</parameter>
+            <parameter key="baseDn">%ldap_baseDn%</parameter>
+            <parameter key="bindRequiresDn">true</parameter>
+            <parameter key="useStartTls">false</parameter>
+            <parameter key="useSsl">false</parameter>
+        </parameter>
+    </parameters>
+
+    <services>
+        <service id="ldap" class="%ldap.class%">
+            <argument>%ldap.arguments%</argument>
+        </service>
+    </services>
+</container>

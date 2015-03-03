@@ -1,0 +1,22 @@
+{
+  "name": "org_heigl/zendldapbundle",
+  "description": "Use Zend\Ldap in Symfony",
+  "keywords": ["ldap", "zend_ldap", "zend", "zend\ldap", "symfony", "bundle"],
+  "homepage": "https://github.com/heiglandreas/ZendLdapBundle",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Heigl",
+      "email": "andreas@heigl.org",
+      "homepage": "http://andreas.heigl.org"
+    }
+  ],
+  "require": {
+    "zendframework/zend-ldap" : "~2.3"
+  },
+  "autoload": {
+    "psr-4": { "Org_Heigl\\Bundle\\ZendLdapBundle": "" }
+  },
+  "target-dir": "Org_Heigl/Bundle/ZendLdapBundle"
+}
